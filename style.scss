@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div.container {
+
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        
+        div.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 900;
+
+                span {
+                    padding: 4px 12px;
+                    border-radius: 6px;
+                    background-color: rgb(1, 1, 137);
+                    color: white;
+                }
+            }
+
+            a {
+                text-decoration-line: none;
+                padding: 0;
+                color: black;
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        div.new::after {
+            content: '🔔'
+        }
+
+        div.notification {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            img {
+                width: 62px;
+            }
+
+            div.content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                p {
+                    margin: 0;
+                    
+                    span.profile-username {
+                        font-weight: 900;
+                        font-size: 1.2rem;
+                    }
+
+                    span.notification {
+                        font-weight: 600;
+                        color:rgb(52, 52, 52);
+                    }
+                }
+
+                p.time-passed {
+                    font-size: 0.9rem;
+                    color: rgb(124, 124, 124);
+                    margin-top: 5px;
+                }
+
+                span#chess-club {
+                    font-weight: 900;
+                    color:rgb(1, 1, 137);
+                    font-size: 1.2rem;
+                }
+
+                p.message {
+                    padding: 12px;
+                    text-align: center;
+                    margin-top: 1rem;
+                    border: 1px solid gray;
+                    line-height: 1.5rem;
+                }
+                
+            }
+
+            div.special-content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
+}
